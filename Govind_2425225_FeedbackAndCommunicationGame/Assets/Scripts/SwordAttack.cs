@@ -11,11 +11,13 @@ public class SwordAttack : MonoBehaviour
     public SoundsScript soundsScript;
 
     Vector2 rightAttackOffset;
+    Vector2 leftAttackOffset;
 
     // Start is called before the first frame update
     void Start()
     {
         rightAttackOffset = transform.localPosition;
+        leftAttackOffset = new Vector2(rightAttackOffset.x -2, rightAttackOffset.y);
         swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false;
     }
@@ -29,10 +31,13 @@ public class SwordAttack : MonoBehaviour
         Debug.Log("collider true right");
     }
 
+    // public void leftHB(){
+    //     transform.localPosition = new Vector3(rightAttackOffset.x * -1, rightAttackOffset.y);
+    // }
     public void AttackLeft()
     {
         swordCollider.enabled = true;
-        transform.localPosition = new Vector3(rightAttackOffset.x * -1, rightAttackOffset.y);
+        transform.localPosition = new Vector2(rightAttackOffset.x - 2, rightAttackOffset.y);
         soundsScript.Sword();
 
         Debug.Log("collider true left");

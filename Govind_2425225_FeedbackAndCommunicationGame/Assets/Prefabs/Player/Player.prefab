@@ -48,6 +48,8 @@ MonoBehaviour:
   swordCollider: {fileID: 8524182380679088786}
   damage: 3
   soundsScript: {fileID: 0}
+  rightPos: {x: 0, y: 0}
+  leftPos: {x: 0, y: 0}
 --- !u!61 &8524182380679088786
 BoxCollider2D:
   m_ObjectHideFlags: 0

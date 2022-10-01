@@ -56,13 +56,15 @@ public class Player : MonoBehaviour
             }
 
             //set direction of sprite to movement direction 
-            if (movementInput.x < 0)
+            if (movementInput.x < 0) //Left?
             {
                 spriteRenderer.flipX = true;
+                
             }
-            else if (movementInput.x > 0)
+            else if (movementInput.x > 0) //Right?
             {
                 spriteRenderer.flipX = false;
+                // swordAttack.leftHB();
             }
         }
     }

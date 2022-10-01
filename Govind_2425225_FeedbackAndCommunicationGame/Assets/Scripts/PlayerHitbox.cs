@@ -17,7 +17,7 @@ public class PlayerHitbox : MonoBehaviour
     public int healthGain;
     public HealthBar healthBar;
     public TextMeshProUGUI healthText;
-
+    public Collider2D playColl;
     //stamina
     public int maxStamina = 10;
     public int currentStamina;
@@ -37,6 +37,7 @@ public class PlayerHitbox : MonoBehaviour
     public GameObject openDoor;
     public SoundsScript soundsScript;
 
+
     public void Awake()
     {
         maxHealth = 10;
@@ -49,10 +50,10 @@ public class PlayerHitbox : MonoBehaviour
         heavyAttackCost = 5;
         specialAttackCost = 10;
         staminaRegain = 1;
+        // this.gameObject.GetComponent<Collider2D>().isTrigger = true;
+    }
 
-}
-
-public void Start()
+    public void Start()
     {
         //health bar
         currentHealth = maxHealth;
@@ -61,6 +62,7 @@ public void Start()
         //stamina bar
         currentStamina = maxStamina;
         healthBar.SetMaxStamina(maxStamina);
+        playColl = this.gameObject.GetComponent<Collider2D>();
     }
 
     public void Update()
@@ -86,7 +88,7 @@ public void Start()
     {
         healthBar.SetStamina(currentStamina);
 
-        if(currentStamina >= 10)
+        if (currentStamina >= 10)
         {
             currentStamina = maxStamina;
         }
@@ -154,8 +156,14 @@ public void Start()
     public IEnumerator FlashRed()
     {
         spriteRenderer.color = Color.red;
+        // this.gameObject.GetComponent<Collider2D>();
+        playColl.enabled = false;
+
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.white;
+
+        yield return new WaitForSeconds(0.7f);
+        playColl.enabled = true;
     }
 
     public IEnumerator FlashGreen()
