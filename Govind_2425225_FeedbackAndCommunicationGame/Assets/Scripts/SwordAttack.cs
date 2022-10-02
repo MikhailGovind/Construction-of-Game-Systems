@@ -7,11 +7,13 @@ using UnityEngine.InputSystem;
 public class SwordAttack : MonoBehaviour
 {
     public Collider2D swordCollider;
-    public int damage = 3;
+    public int damage;
     public SoundsScript soundsScript;
 
     Vector2 rightAttackOffset;
     Vector2 leftAttackOffset;
+
+    public PlayerHitbox playerHitbox;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,9 @@ public class SwordAttack : MonoBehaviour
         leftAttackOffset = new Vector2(rightAttackOffset.x -2, rightAttackOffset.y);
         swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false;
+
+        damage = playerHitbox.maxStrength - 7;
+        Debug.Log("light attack" + damage);
     }
 
     public void AttackRight()

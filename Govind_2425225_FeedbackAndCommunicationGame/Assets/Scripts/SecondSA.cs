@@ -13,6 +13,8 @@ public class SecondSA : MonoBehaviour
     Vector2 rightAttackOffset;
     Vector2 leftAttackOffset;
 
+    public PlayerHitbox playerHitbox;
+
     private void Start()
     {
         rightAttackOffset = transform.localPosition;
@@ -20,6 +22,9 @@ public class SecondSA : MonoBehaviour
         swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false;
         damage = 5;
+
+        damage = playerHitbox.maxStrength - 5;
+        Debug.Log("heavy attack" + damage);
     }
 
 public void AttackRight()
