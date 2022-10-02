@@ -126,7 +126,8 @@ public class PlayerHitbox : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            currentHealth -= hurt;
+            Enemy enemy = other.GetComponent<Enemy>();
+            currentHealth -= enemy.damage;
             StartCoroutine(FlashRed());
 
             if (currentHealth < 0)
