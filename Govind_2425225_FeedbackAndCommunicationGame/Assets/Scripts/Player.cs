@@ -163,6 +163,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void EndSwordAttack()
+    {
+        UnlockMovement();
+        swordAttack.StopAttack();
+    }
+
     public void SwordAttack2()
     {
         LockMovement();
