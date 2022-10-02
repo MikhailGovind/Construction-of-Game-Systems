@@ -13,7 +13,7 @@ public class PlayerHitbox : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public int maxHealth;
     public int currentHealth;
-    public int hurt = 2;
+    public int hurtSlime = 2;
     public int healthGain;
     public HealthBar healthBar;
     public TextMeshProUGUI healthText;
@@ -47,7 +47,7 @@ public class PlayerHitbox : MonoBehaviour
     public void Awake()
     {
         maxHealth = 10;
-        hurt = 2;
+        hurtSlime = 2;
         healthGain = 2;
 
         coinCount = 90;
@@ -135,6 +135,22 @@ public class PlayerHitbox : MonoBehaviour
             }
         }
 
+        if (other.tag == "Enemy2")
+        {
+            Enemy2 enemy = other.GetComponent<Enemy2>();
+            if (enemy.isAttacking)
+            {
+                currentHealth -= enemy.damage;
+                StartCoroutine(FlashRed());
+
+                if (currentHealth < 0)
+                {
+                    currentHealth = 0;
+                }
+            }
+
+        }
+        
         if (other.tag == "HealthPot")
         {
             if (currentHealth < 10)
