@@ -22,7 +22,7 @@ public class SecondSA : MonoBehaviour
         damage = 5;
     }
 
-public void AttackRight()
+    public void AttackRight()
     {
         swordCollider.enabled = true;
         Debug.Log("SASecond happened");
@@ -56,6 +56,19 @@ public void AttackRight()
                 enemy.currentHealth -= damage;
 
                 Debug.Log("trigger activated");
+            }
+        }
+
+        if (other.tag == "Enemy2")
+        {
+            //deal damage to enemy
+            Enemy2 enemy = other.GetComponent<Enemy2>();
+
+            if (enemy != null)
+            {
+                enemy.currentHealth -= damage;
+
+                Debug.Log(enemy.maxHealth);
             }
         }
     }

@@ -477,7 +477,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 9181327884927911978}
   maxHealth: 10
   currentHealth: 0
-  hurt: 2
+  hurtSlime: 2
   healthGain: 0
   healthBar: {fileID: 0}
   healthText: {fileID: 0}
@@ -508,7 +508,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.060477257, y: 0.11347318}
+  m_Offset: {x: -0.025727749, y: 0.23202872}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -519,7 +519,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8091202, y: 0.13500261}
+  m_Size: {x: 1.0094366, y: 0.44570017}
   m_EdgeRadius: 0
 --- !u!1 &8506096751712670395
 GameObject:

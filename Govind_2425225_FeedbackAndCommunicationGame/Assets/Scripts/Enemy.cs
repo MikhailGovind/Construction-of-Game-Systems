@@ -14,10 +14,11 @@ public class Enemy : MonoBehaviour
     public GameObject coinTwo;
     public Transform transform; //Location to drop coins
 
-    private Vector2 _direction; //Direction of walking?
+    private Vector2 _direction;
 
     Animator animator; //
 
+    public int damage = 2; //Damage enemy deals
     public int maxHealth = 5;
     public int currentHealth;
     public HealthBar healthBar;
@@ -47,6 +48,9 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        DamageTaken();
+        healthText.text = "HP:" + currentHealth;
+
         if (_direction.x == 0)
         {
             animator.SetBool("isWalking", false);
@@ -90,9 +94,8 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Sword")
         {
-            animator.SetTrigger("Hit");
-            DamageTaken();
-            healthText.text = "HP:" + currentHealth;
+            // animator.SetTrigger("Hit");
+
             StartCoroutine(FlashRed());
         }
     }

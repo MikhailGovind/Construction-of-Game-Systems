@@ -17,7 +17,7 @@ public class SwordAttack : MonoBehaviour
     void Start()
     {
         rightAttackOffset = transform.localPosition;
-        leftAttackOffset = new Vector2(rightAttackOffset.x -2, rightAttackOffset.y);
+        leftAttackOffset = new Vector2(rightAttackOffset.x - 2, rightAttackOffset.y);
         swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false;
     }
@@ -53,6 +53,19 @@ public class SwordAttack : MonoBehaviour
         {
             //deal damage to enemy
             Enemy enemy = other.GetComponent<Enemy>();
+
+            if (enemy != null)
+            {
+                enemy.currentHealth -= damage;
+
+                Debug.Log(enemy.maxHealth);
+            }
+        }
+
+        if (other.tag == "Enemy2")
+        {
+            //deal damage to enemy
+            Enemy2 enemy = other.GetComponent<Enemy2>();
 
             if (enemy != null)
             {
