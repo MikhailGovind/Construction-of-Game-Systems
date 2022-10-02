@@ -11,13 +11,14 @@ public class PlayerHitbox : MonoBehaviour
 
     //health
     public SpriteRenderer spriteRenderer;
-    public int maxHealth = 10;
+    public int maxHealth;
     public int currentHealth;
     public int hurtSlime = 2;
     public int healthGain;
     public HealthBar healthBar;
     public TextMeshProUGUI healthText;
     public Collider2D playColl;
+
     //stamina
     public int maxStamina = 10;
     public int currentStamina;
@@ -26,6 +27,9 @@ public class PlayerHitbox : MonoBehaviour
     public int specialAttackCost;
     public int staminaRegain;
     public TextMeshProUGUI staminaText;
+
+    //strength
+    public int maxStrength;
 
     //coin
     public int coinCount;
@@ -37,25 +41,31 @@ public class PlayerHitbox : MonoBehaviour
     public GameObject openDoor;
     public SoundsScript soundsScript;
 
+    public static int coins;
+    public string actorName;
 
     public void Awake()
     {
         maxHealth = 10;
         hurtSlime = 2;
         healthGain = 2;
-        coinUp = 1;
+
+        coinCount = 90;
+        coinUp = 10;
 
         maxStamina = 10;
         lightAttackCost = 3;
         heavyAttackCost = 5;
         specialAttackCost = 10;
         staminaRegain = 1;
+
+        maxStrength = 10;
     }
 
     public void Start()
     {
         //health bar
-        currentHealth = maxHealth;
+        currentHealth = maxStamina;
         healthBar.SetMaxHealth(maxHealth);
 
         //stamina bar
@@ -69,8 +79,13 @@ public class PlayerHitbox : MonoBehaviour
         DamageTaken();
         StaminaLoss();
         coinText.text = " " + coinCount;
-        healthText.text = "HP:" + currentHealth;
-        staminaText.text = "ST:" + currentStamina;
+        healthText.text = "HP: " + currentHealth + "/" + maxHealth;
+        staminaText.text = "ST:" + currentStamina + "/" + maxStamina;
+
+        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth);
+        healthBar.SetMaxStamina(maxStamina);
+        healthBar.SetStamina(currentStamina);
     }
 
     public void DamageTaken()
@@ -87,7 +102,7 @@ public class PlayerHitbox : MonoBehaviour
     {
         healthBar.SetStamina(currentStamina);
 
-        if (currentStamina >= 10)
+        if (currentStamina >= maxStamina)
         {
             currentStamina = maxStamina;
         }
@@ -111,8 +126,7 @@ public class PlayerHitbox : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            Enemy enemy = other.GetComponent<Enemy>();
-            currentHealth -= enemy.damage;
+            currentHealth -= hurt;
             StartCoroutine(FlashRed());
 
             if (currentHealth < 0)
@@ -136,7 +150,7 @@ public class PlayerHitbox : MonoBehaviour
             }
 
         }
-
+        
         if (other.tag == "HealthPot")
         {
             if (currentHealth < 10)
@@ -145,9 +159,9 @@ public class PlayerHitbox : MonoBehaviour
                 StartCoroutine(FlashGreen());
             }
 
-            if (currentHealth >= 10)
+            if (currentHealth >= maxHealth)
             {
-                currentHealth = 10;
+                currentHealth = maxHealth;
             }
         }
 

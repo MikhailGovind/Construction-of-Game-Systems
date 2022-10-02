@@ -13,6 +13,8 @@ public class ThirdSA : MonoBehaviour
     Vector2 rightAttackOffset;
     Vector2 leftAttackOffset;
 
+    public PlayerHitbox playerHitbox;
+
     private void Start()
     {
         rightAttackOffset = transform.localPosition;
@@ -20,12 +22,20 @@ public class ThirdSA : MonoBehaviour
         swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false;
         damage = 10;
+
+        damage = playerHitbox.maxStrength;
+    }
+
+    private void Update()
+    {
+        damage = playerHitbox.maxStrength;
     }
 
     public void AttackRight()
     {
         swordCollider.enabled = true;
-        Debug.Log("SASecond happened");
+        Debug.Log("thirdSA happened");
+        Debug.Log("special attack" + damage);
 
         transform.localPosition = rightAttackOffset;
         soundsScript.Sword();
@@ -34,7 +44,9 @@ public class ThirdSA : MonoBehaviour
     public void AttackLeft()
     {
         swordCollider.enabled = true;
-        Debug.Log("SASecond happened");
+        Debug.Log("thirdSA happened");
+        Debug.Log("special attack" + damage);
+
         transform.localPosition = new Vector2(rightAttackOffset.x - 2, rightAttackOffset.y);
         soundsScript.Sword();
     }
@@ -58,7 +70,7 @@ public class ThirdSA : MonoBehaviour
                 Debug.Log("trigger activated");
             }
         }
-
+        
         if (other.tag == "Enemy2")
         {
             //deal damage to enemy

@@ -13,6 +13,8 @@ public class SecondSA : MonoBehaviour
     Vector2 rightAttackOffset;
     Vector2 leftAttackOffset;
 
+    public PlayerHitbox playerHitbox;
+
     private void Start()
     {
         rightAttackOffset = transform.localPosition;
@@ -20,9 +22,12 @@ public class SecondSA : MonoBehaviour
         swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false;
         damage = 5;
+
+        damage = playerHitbox.maxStrength - 5;
+        Debug.Log("heavy attack" + damage);
     }
 
-    public void AttackRight()
+public void AttackRight()
     {
         swordCollider.enabled = true;
         Debug.Log("SASecond happened");
@@ -58,7 +63,7 @@ public class SecondSA : MonoBehaviour
                 Debug.Log("trigger activated");
             }
         }
-
+        
         if (other.tag == "Enemy2")
         {
             //deal damage to enemy
