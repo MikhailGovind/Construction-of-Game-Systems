@@ -9,13 +9,14 @@ public class Enemy : MonoBehaviour
 {
     PlayerHitbox playerHitbox;
 
+    //Coins to Drop
     public GameObject coinOne;
     public GameObject coinTwo;
-    public Transform transform;
+    public Transform transform; //Location to drop coins
 
-    private Vector2 _direction;
+    private Vector2 _direction; //Direction of walking?
 
-    Animator animator;
+    Animator animator; //
 
     public int maxHealth = 5;
     public int currentHealth;
@@ -46,9 +47,6 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        DamageTaken();
-        healthText.text = "HP:" + currentHealth;
-
         if (_direction.x == 0)
         {
             animator.SetBool("isWalking", false);
@@ -86,13 +84,15 @@ public class Enemy : MonoBehaviour
         Vector2 position = transform.position;
         GameObject coin = Instantiate(coinOne, position, Quaternion.identity);
         GameObject secondCoin = Instantiate(coinTwo, position + new Vector2(0.3f, 0.3f), Quaternion.identity);
-    }    
+    }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Sword")
+        if (other.gameObject.tag == "Sword")
         {
             animator.SetTrigger("Hit");
+            DamageTaken();
+            healthText.text = "HP:" + currentHealth;
             StartCoroutine(FlashRed());
         }
     }
