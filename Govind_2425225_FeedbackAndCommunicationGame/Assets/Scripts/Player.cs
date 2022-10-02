@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
     public SwordAttack swordAttack;
+    public SecondSA secondSA;
+    public ThirdSA thirdSA;
     public PlayerHitbox playerHitbox;
 
 
@@ -165,6 +167,46 @@ public class Player : MonoBehaviour
     {
         UnlockMovement();
         swordAttack.StopAttack();
+    }
+
+    public void SwordAttack2()
+    {
+        LockMovement();
+
+        if (spriteRenderer.flipX == true)
+        {
+            secondSA.AttackLeft();
+        }
+        else
+        {
+            secondSA.AttackRight();
+        }
+    }
+
+    public void EndSwordAttack2()
+    {
+        UnlockMovement();
+        secondSA.StopAttack();
+    }
+
+    public void SwordAttack3()
+    {
+        LockMovement();
+
+        if (spriteRenderer.flipX == true)
+        {
+            thirdSA.AttackLeft();
+        }
+        else
+        {
+            thirdSA.AttackRight();
+        }
+    }
+
+    public void EndSwordAttack3()
+    {
+        UnlockMovement();
+        thirdSA.StopAttack();
     }
 
     public void LockMovement()

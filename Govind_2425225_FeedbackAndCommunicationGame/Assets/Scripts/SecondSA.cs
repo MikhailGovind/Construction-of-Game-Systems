@@ -4,47 +4,44 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
-public class SwordAttack : MonoBehaviour
+public class SecondSA : MonoBehaviour
 {
     public Collider2D swordCollider;
-    public int damage = 3;
+    public int damage;
     public SoundsScript soundsScript;
 
     Vector2 rightAttackOffset;
     Vector2 leftAttackOffset;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rightAttackOffset = transform.localPosition;
-        leftAttackOffset = new Vector2(rightAttackOffset.x -2, rightAttackOffset.y);
+        leftAttackOffset = transform.localPosition;
         swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false;
+        damage = 5;
     }
 
-    public void AttackRight()
+public void AttackRight()
     {
         swordCollider.enabled = true;
+        Debug.Log("SASecond happened");
+
         transform.localPosition = rightAttackOffset;
         soundsScript.Sword();
-
-        Debug.Log("collider true right");
     }
 
     public void AttackLeft()
     {
         swordCollider.enabled = true;
+        Debug.Log("SASecond happened");
         transform.localPosition = new Vector2(rightAttackOffset.x - 2, rightAttackOffset.y);
         soundsScript.Sword();
-
-        Debug.Log("collider true left");
     }
 
     public void StopAttack()
     {
         swordCollider.enabled = false;
-
-        Debug.Log("collider false");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -58,7 +55,7 @@ public class SwordAttack : MonoBehaviour
             {
                 enemy.currentHealth -= damage;
 
-                Debug.Log(enemy.maxHealth);
+                Debug.Log("trigger activated");
             }
         }
     }
