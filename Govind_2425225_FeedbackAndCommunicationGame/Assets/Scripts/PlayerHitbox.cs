@@ -50,7 +50,6 @@ public class PlayerHitbox : MonoBehaviour
         heavyAttackCost = 5;
         specialAttackCost = 10;
         staminaRegain = 1;
-        // this.gameObject.GetComponent<Collider2D>().isTrigger = true;
     }
 
     public void Start()
@@ -156,7 +155,6 @@ public class PlayerHitbox : MonoBehaviour
     public IEnumerator FlashRed()
     {
         spriteRenderer.color = Color.red;
-        // this.gameObject.GetComponent<Collider2D>();
         playColl.enabled = false;
 
         yield return new WaitForSeconds(0.1f);

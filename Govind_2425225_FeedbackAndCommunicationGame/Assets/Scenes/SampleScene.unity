@@ -2080,6 +2080,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434696146}
   m_CullTransparentMesh: 1
+--- !u!114 &446199167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5583146628076863433, guid: 8a57f4d744a82424cab801b431cf7dc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1061437005826132769}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534343f84b05c574e917cd329ac830cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &446976206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21708,6 +21720,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8728cc48d2747494893fd60426c06f6e, type: 3}
+--- !u!114 &1765133419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1965183598244090690, guid: 8a57f4d744a82424cab801b431cf7dc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1061437005826132769}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01e8e7164280d04ea2cbdda725e5e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1783427430
 GameObject:
   m_ObjectHideFlags: 0
@@ -27567,6 +27591,21 @@ PrefabInstance:
       propertyPath: swordCollider
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1965183598244090690, guid: 8a57f4d744a82424cab801b431cf7dc6,
+        type: 3}
+      propertyPath: soundsScript
+      value: 
+      objectReference: {fileID: 903114168}
+    - target: {fileID: 2180295049973158545, guid: 8a57f4d744a82424cab801b431cf7dc6,
+        type: 3}
+      propertyPath: thirdSA
+      value: 
+      objectReference: {fileID: 1765133419}
+    - target: {fileID: 2180295049973158545, guid: 8a57f4d744a82424cab801b431cf7dc6,
+        type: 3}
+      propertyPath: secondSA
+      value: 
+      objectReference: {fileID: 446199167}
     - target: {fileID: 2180295049973158545, guid: 8a57f4d744a82424cab801b431cf7dc6,
         type: 3}
       propertyPath: healthBar
@@ -27587,6 +27626,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5583146628076863433, guid: 8a57f4d744a82424cab801b431cf7dc6,
+        type: 3}
+      propertyPath: soundsScript
+      value: 
+      objectReference: {fileID: 903114168}
     - target: {fileID: 7144166568584138481, guid: 8a57f4d744a82424cab801b431cf7dc6,
         type: 3}
       propertyPath: m_UIInputModule
