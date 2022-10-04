@@ -26,12 +26,18 @@ public class Notification : MonoBehaviour
     public GameObject seventhText;
     public GameObject eighthText;
 
+    //instructions
+    public GameObject instructionsPanel;
+    public GameObject ninthText;
+    public GameObject tenthText;
+
     public PlayerHitbox playerHitbox;
     public SoundsScript soundsScript;
 
     private void Awake()
     {
         StartCoroutine(Flash());
+        StartCoroutine(instructionsPanelOpen());
     }
 
     #region King's Notice
@@ -109,6 +115,21 @@ public class Notification : MonoBehaviour
         eighthText.SetActive(true);
         yield return new WaitForSeconds(3f);
         npcPanel.SetActive(false);
+    }
+
+    #endregion
+
+    #region Instructions
+
+    public IEnumerator instructionsPanelOpen()
+    {
+        instructionsPanel.SetActive(true);
+        ninthText.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        ninthText.SetActive(false);
+        tenthText.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        instructionsPanel.SetActive(false);
     }
 
     #endregion
