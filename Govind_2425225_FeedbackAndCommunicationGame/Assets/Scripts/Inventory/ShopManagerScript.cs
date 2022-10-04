@@ -13,17 +13,11 @@ public class ShopManagerScript : MonoBehaviour
     public TextMeshProUGUI TEEtxt;
     public GameObject fullBagPanel;
     public GameObject noCoinsPanel;
-    public GameObject noEnemyEquipmentPanel;
     public string StringsListCount;
     public static int newItemID;
     public static Vector2 tempLocation;
 
     public GameObject bagContents;
-
-    public static int enemyEquipmentNumber;
-    public static int moneyFromSale;
-    public static int enemyEquipmentWorth;
-    public TextMeshProUGUI enemyEquipmentNumberText;
 
     //bag
     public static GameObject BagObject;
@@ -40,8 +34,6 @@ public class ShopManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyEquipmentWorth = 45;
-
         //ID's
         shopItems[1, 1] = 1;
         shopItems[1, 2] = 2;
@@ -78,8 +70,7 @@ public class ShopManagerScript : MonoBehaviour
 
     private void Update()
     {
-        CoinsTXT.text = "Coins: " + PlayerValues.coins;
-        TEEtxt.text = "Equipment To Sell: " + enemyEquipmentNumber;
+        CoinsTXT.text = "Coins: " + playerHitbox.coinCount;
     }
 
     //buying items
@@ -91,9 +82,9 @@ public class ShopManagerScript : MonoBehaviour
             if (playerHitbox.coinCount >= shopItems[2, newItemID])
             {
                 //when purchasing items
-                PlayerValues.coins -= shopItems[2, newItemID];
+                playerHitbox.coinCount -= shopItems[2, newItemID];
                 shopItems[3, newItemID]++;
-                CoinsTXT.text = "Coins: " + PlayerValues.coins.ToString();
+                CoinsTXT.text = "Coins: " + playerHitbox.coinCount.ToString();
 
                 //increase inventory space
                 Money.spaceValue += 1;

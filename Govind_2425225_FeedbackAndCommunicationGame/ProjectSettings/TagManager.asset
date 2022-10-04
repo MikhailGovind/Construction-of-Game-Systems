@@ -23,6 +23,8 @@ TagManager:
   - Enemy2
   - KingNotice
   - SkeegNotice
+  - Shop
+  - Win
   layers:
   - Default
   - TransparentFX

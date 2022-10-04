@@ -39,10 +39,16 @@ public class PlayerHitbox : MonoBehaviour
     //door
     public GameObject closedDoor;
     public GameObject openDoor;
+    public GameObject doorCollider;
     public SoundsScript soundsScript;
+    public int bossKillCount;
 
     public static int coins;
     public string actorName;
+
+    //shop
+    public GameObject backToMapPanel;
+    public GameObject mainPanels;
 
     public void Awake()
     {
@@ -173,15 +179,34 @@ public class PlayerHitbox : MonoBehaviour
 
         if (other.tag == "Door")
         {
-            if (coinCount >= 10)
+            if (bossKillCount == 1)
             {
                 StartCoroutine(FlashBlue());
                 closedDoor.SetActive(false);
                 openDoor.SetActive(true);
+                doorCollider.SetActive(false);
                 soundsScript.Door();
                 soundsScript.Opened();
             }
         }
+
+        if (other.tag == "Shop")
+        {
+            mainPanels.SetActive(true);
+            backToMapPanel.SetActive(true);
+        }
+
+        if (other.tag == "Win")
+        {
+            StartCoroutine(FlashBlue());
+            StartCoroutine(Win());
+        }
+    }
+
+    public IEnumerator Win()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("WinScene");
     }
 
     public IEnumerator FlashRed()
