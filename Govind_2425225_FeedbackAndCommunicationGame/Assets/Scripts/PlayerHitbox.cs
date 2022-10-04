@@ -50,6 +50,10 @@ public class PlayerHitbox : MonoBehaviour
     public GameObject backToMapPanel;
     public GameObject mainPanels;
 
+    //npc
+    public GameObject npc;
+    public Notification notification;
+
     public void Awake()
     {
         maxHealth = 10;
@@ -201,6 +205,20 @@ public class PlayerHitbox : MonoBehaviour
             StartCoroutine(FlashBlue());
             StartCoroutine(Win());
         }
+
+        if (other.tag == "NPC")
+        {
+            StartCoroutine(NPC());
+        }
+    }
+
+    public IEnumerator NPC()
+    {
+        npc.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        notification.NPCInteraction();
+        yield return new WaitForSeconds(12f);
+        npc.SetActive(false);
     }
 
     public IEnumerator Win()

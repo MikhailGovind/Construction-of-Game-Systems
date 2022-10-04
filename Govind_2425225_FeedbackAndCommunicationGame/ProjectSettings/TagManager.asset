@@ -25,6 +25,7 @@ TagManager:
   - SkeegNotice
   - Shop
   - Win
+  - NPC
   layers:
   - Default
   - TransparentFX

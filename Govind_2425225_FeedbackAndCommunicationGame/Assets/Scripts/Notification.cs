@@ -21,10 +21,13 @@ public class Notification : MonoBehaviour
     public GameObject fifthText;
     public GameObject sixthText;
 
+    //npc
+    public GameObject npcPanel;
+    public GameObject seventhText;
+    public GameObject eighthText;
 
     public PlayerHitbox playerHitbox;
     public SoundsScript soundsScript;
-
 
     private void Awake()
     {
@@ -86,6 +89,26 @@ public class Notification : MonoBehaviour
     public void skeegPanelClosed()
     {
         kingPanel.SetActive(false);
+    }
+
+    #endregion
+
+    #region NPC
+
+    public void NPCInteraction()
+    {
+        StartCoroutine(NPCPanelOpen());
+    }
+
+    public IEnumerator NPCPanelOpen()
+    {
+        npcPanel.SetActive(true);
+        seventhText.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        seventhText.SetActive(false);
+        eighthText.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        npcPanel.SetActive(false);
     }
 
     #endregion
