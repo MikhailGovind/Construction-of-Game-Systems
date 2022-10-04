@@ -5,10 +5,9 @@ using UnityEngine.InputSystem;
 using UnityEngine.AI;
 using TMPro;
 
-public class Enemy2 : MonoBehaviour
+public class Enemy3 : MonoBehaviour
 {
     PlayerHitbox playerHitbox;
-    public string demoVar;
 
     //Coins to Drop
     public GameObject coinOne;

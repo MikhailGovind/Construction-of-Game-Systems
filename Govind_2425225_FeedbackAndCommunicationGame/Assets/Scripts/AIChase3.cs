@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIChase2 : MonoBehaviour
+public class AIChase3 : MonoBehaviour
 {
     public bool isAttacking = false;
     public bool isWaiting = false;

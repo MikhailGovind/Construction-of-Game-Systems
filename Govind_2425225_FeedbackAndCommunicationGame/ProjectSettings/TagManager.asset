@@ -21,6 +21,8 @@ TagManager:
   - Helmet
   - Weapon
   - Enemy2
+  - Enemy3
+  - Player_gfx
   layers:
   - Default
   - TransparentFX

@@ -122,6 +122,24 @@ public class PlayerHitbox : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.tag == "Enemy2")
+        {
+            Enemy2 enemy = other.GetComponent<Enemy2>();
+            if (enemy.isAttacking) 
+            {
+                currentHealth -= enemy.damage;
+                StartCoroutine(FlashRed());
+
+                if (currentHealth < 0)
+                {
+                    currentHealth = 0;
+                }
+            }
+
+        }
+    }
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")
@@ -136,22 +154,25 @@ public class PlayerHitbox : MonoBehaviour
             }
         }
 
-        if (other.tag == "Enemy2")
-        {
-            Enemy2 enemy = other.GetComponent<Enemy2>();
-            if (enemy.isAttacking)
-            {
-                currentHealth -= enemy.damage;
-                StartCoroutine(FlashRed());
+        // if (other.tag == "Enemy2")
+        // {
+        //     Debug.Log("Enemy2 Triggered");
+        //     Enemy2 enemy = other.GetComponent<Enemy2>();
+        //     Debug.Log("If is checked");
+        //     if (enemy.isAttacking) //Doesn't work because only on Trigger enter
+        //     {
+        //         Debug.Log("Enemy 2 Attacked");
+        //         currentHealth -= enemy.damage;
+        //         StartCoroutine(FlashRed());
 
-                if (currentHealth < 0)
-                {
-                    currentHealth = 0;
-                }
-            }
+        //         if (currentHealth < 0)
+        //         {
+        //             currentHealth = 0;
+        //         }
+        //     }
 
-        }
-        
+        // }
+
         if (other.tag == "HealthPot")
         {
             if (currentHealth < 10)
