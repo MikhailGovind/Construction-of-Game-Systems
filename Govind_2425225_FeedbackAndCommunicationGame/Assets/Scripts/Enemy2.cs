@@ -26,7 +26,7 @@ public class Enemy2 : MonoBehaviour
     public HealthBar healthBar;
     public TextMeshProUGUI healthText;
     public SpriteRenderer sprite;
-    Transform danger;
+    public Transform danger;
     public bool inRange;
     public bool isAttacking = false;
 
@@ -39,6 +39,7 @@ public class Enemy2 : MonoBehaviour
 
     private void Awake()
     {
+        sprite.color = Color.red;
         danger = this.gameObject.transform.GetChild(0);
         danger.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
@@ -125,24 +126,21 @@ public class Enemy2 : MonoBehaviour
 
     public IEnumerator JumpingAttack()
     {
-        //Deals damage thoughout duration of Jump --------------------------
-        // chaseScript.isAttacking = true;
-        // isAttacking = true;
-        // danger.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        // yield return new WaitForSeconds(jumpDuration);
-        // danger.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        // chaseScript.isAttacking = false;
-        // isAttacking = false;
-
         //Deals damage only in last 0.1f -----------------------------------
-        chaseScript.isAttacking = true;
+        chaseScript.isWaiting = true;
         danger.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        yield return new WaitForSeconds(jumpDuration - 0.1f);
-        isAttacking = true;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(jumpDuration - 1f);
+
+        sprite.color = Color.green;
+        chaseScript.isWaiting = false;
+        chaseScript.isAttacking = true;
+        isAttacking = true; 
+        yield return new WaitForSeconds(1f);
+
         danger.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         chaseScript.isAttacking = false;
         isAttacking = false;
+        sprite.color = Color.red;
     }
 
     public void updateDanger(Vector2 target)

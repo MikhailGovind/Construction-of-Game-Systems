@@ -34,8 +34,8 @@ public class ThirdSA : MonoBehaviour
     public void AttackRight()
     {
         swordCollider.enabled = true;
-        Debug.Log("thirdSA happened");
-        Debug.Log("special attack" + damage);
+        // Debug.Log("thirdSA happened");
+        // Debug.Log("special attack" + damage);
 
         transform.localPosition = rightAttackOffset;
         soundsScript.Sword();
@@ -44,8 +44,8 @@ public class ThirdSA : MonoBehaviour
     public void AttackLeft()
     {
         swordCollider.enabled = true;
-        Debug.Log("thirdSA happened");
-        Debug.Log("special attack" + damage);
+        // Debug.Log("thirdSA happened");
+        // Debug.Log("special attack" + damage);
 
         transform.localPosition = new Vector2(rightAttackOffset.x - 2, rightAttackOffset.y);
         soundsScript.Sword();
@@ -67,7 +67,7 @@ public class ThirdSA : MonoBehaviour
             {
                 enemy.currentHealth -= damage;
 
-                Debug.Log("trigger activated");
+                // Debug.Log("trigger activated");
             }
         }
         
@@ -80,7 +80,7 @@ public class ThirdSA : MonoBehaviour
             {
                 enemy.currentHealth -= damage;
 
-                Debug.Log(enemy.maxHealth);
+                // Debug.Log(enemy.maxHealth);
             }
         }
     }
