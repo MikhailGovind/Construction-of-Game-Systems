@@ -21,6 +21,8 @@ TagManager:
   - Helmet
   - Weapon
   - Enemy2
+  - KingNotice
+  - SkeegNotice
   layers:
   - Default
   - TransparentFX
