@@ -49,6 +49,7 @@ public class PlayerHitbox : MonoBehaviour
     //shop
     public GameObject backToMapPanel;
     public GameObject mainPanels;
+    public GameObject buttonsButton;
 
     //npc
     public GameObject npc;
@@ -75,7 +76,7 @@ public class PlayerHitbox : MonoBehaviour
     public void Start()
     {
         //health bar
-        currentHealth = maxStamina;
+        currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
         //stamina bar
@@ -198,6 +199,7 @@ public class PlayerHitbox : MonoBehaviour
         {
             mainPanels.SetActive(true);
             backToMapPanel.SetActive(true);
+            buttonsButton.SetActive(true);
         }
 
         if (other.tag == "Win")
