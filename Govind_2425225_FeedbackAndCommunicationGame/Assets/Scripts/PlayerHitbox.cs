@@ -50,6 +50,7 @@ public class PlayerHitbox : MonoBehaviour
     public GameObject backToMapPanel;
     public GameObject mainPanels;
     public GameObject buttonsButton;
+    public GameObject equipmentButton;
 
     //npc
     public GameObject npc;
@@ -225,6 +226,7 @@ public class PlayerHitbox : MonoBehaviour
             mainPanels.SetActive(true);
             backToMapPanel.SetActive(true);
             buttonsButton.SetActive(true);
+            equipmentButton.SetActive(false);
         }
 
         if (other.tag == "Win")
