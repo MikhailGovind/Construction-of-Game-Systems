@@ -150,9 +150,6 @@ public class Enemy3 : MonoBehaviour
                 break;
         }
 
-        // Attack();
-        // }
-
     }
     public void upBezier(int pnt)
     {
