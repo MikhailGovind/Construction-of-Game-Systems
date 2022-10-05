@@ -28,6 +28,8 @@ TagManager:
   - NPC
   - Player_gfx
   - Enemy3
+  - BossPlate
+  - Boss
   layers:
   - Default
   - TransparentFX

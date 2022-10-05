@@ -138,7 +138,7 @@ public class PlayerHitbox : MonoBehaviour
         if (other.tag == "Enemy2")
         {
             Enemy2 enemy = other.GetComponent<Enemy2>();
-            if (enemy.isAttacking) 
+            if (enemy.isAttacking)
             {
                 currentHealth -= enemy.damage;
                 StartCoroutine(FlashRed());
@@ -151,20 +151,33 @@ public class PlayerHitbox : MonoBehaviour
 
         }
 
-        if (other.tag == "Enemy3")
+        // if (other.tag == "Enemy3")
+        // {
+        //     Enemy3 enemy = other.GetComponent<Enemy3>();
+        //     if (enemy.isAttacking)
+        //     {
+        //         currentHealth -= enemy.damage;
+        //         StartCoroutine(FlashRed());
+
+        //         if (currentHealth < 0)
+        //         {
+        //             currentHealth = 0;
+        //         }
+        //     }
+
+        // }
+
+        if (other.tag == "BossPlate")
         {
-            Enemy3 enemy = other.GetComponent<Enemy3>();
-            if (enemy.isAttacking) 
+            Enemy3 enemy = other.GetComponentInParent<Enemy3>();
+
+            currentHealth -= enemy.damage;
+            StartCoroutine(FlashRed());
+
+            if (currentHealth < 0)
             {
-                currentHealth -= enemy.damage;
-                StartCoroutine(FlashRed());
-
-                if (currentHealth < 0)
-                {
-                    currentHealth = 0;
-                }
+                currentHealth = 0;
             }
-
         }
     }
     public void OnTriggerEnter2D(Collider2D other)

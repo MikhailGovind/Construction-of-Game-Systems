@@ -83,16 +83,15 @@ public class SecondSA : MonoBehaviour
             }
         }
 
-        if (other.tag == "Enemy3")
+        if (other.tag == "Boss")
         {
             //deal damage to enemy
-            Enemy3 enemy = other.GetComponent<Enemy3>();
+            Boss boss = other.GetComponent<Boss>();
 
-            if (enemy != null)
+            if (boss != null)
             {
-                enemy.currentHealth -= damage;
+                boss.currentHealth -= damage;
 
-                // Debug.Log(enemy.maxHealth);
             }
         }
     }
