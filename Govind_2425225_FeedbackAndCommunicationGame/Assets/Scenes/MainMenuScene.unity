@@ -664,15 +664,19 @@ MonoBehaviour:
     - penusbmic (https://penusbmic.itch.io/sci-fi-character-pack-10)
 
 
-    "Wipe
-    Away Those Tears" Composed by Jonathan Shaw (www.jshaw.co.uk)
+    Huntress-
+    Luis Melo (https://luizmelo.itch.io/huntress)
 
 
-    Mystic wood
-    - https://game-endeavor.itch.io/
+    "Wipe Away Those Tears" Composed
+    by Jonathan Shaw (www.jshaw.co.uk)
 
 
-    Forest Ambience - Tiny Woods - (https://opengameart.org/content/forest-ambience)
+    Mystic wood - https://game-endeavor.itch.io/
+
+
+    Forest
+    Ambience - Tiny Woods - (https://opengameart.org/content/forest-ambience)
 
 
     Sword
@@ -771,8 +775,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6.7
-  m_fontSizeBase: 6.7
+  m_fontSize: 6.5
+  m_fontSizeBase: 6.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
