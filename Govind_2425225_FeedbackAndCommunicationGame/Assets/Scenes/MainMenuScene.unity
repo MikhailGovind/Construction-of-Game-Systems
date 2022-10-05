@@ -657,26 +657,109 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Fantasy Free GUI - ZOSMA (https://assetstore.unity.com/packages/2d/gui/icons/fantasy-free-gui-147682)\r\n\r\nTrollNest
-    Free UI Buttons - uifabrica (https://assetstore.unity.com/packages/2d/gui/icons/fantasy-free-gui-147682)\r\n\r\nHero
-    Knight - Pixel Art - Sven Thole (https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188)\r\n\r\nBandits
-    - Pixel Art - Sven Thole (https://assetstore.unity.com/packages/2d/characters/bandits-pixel-art-104130)\r\n\r\nFantasy
-    Wooden GUI:Free - Black Hammer (https://assetstore.unity.com/packages/2d/gui/fantasy-wooden-gui-free-103811)\r\n\r\nCode
-    Monkey Utilities - Code Monkey (https://unitycodemonkey.com/utils.php)\r\n\r\nPanel
-    Image - Wallpaper Flare (https://www.wallpaperflare.com/3d-art-of-forest-pixel-art-pixelated-trees-nature-plant-wallpaper-pbqnc/download)\r\n\r\nBlood
-    Splatter Image - FREEICONSPNG (https://www.freeiconspng.com/downloadimg/44466)\r\n\r\nTurn-based
-    Combat in Unity - Brackeys (https://youtu.be/_1pz_ohupPs)\r\n\r\nSimple Turn-Based
-    RPG Battle System (Unity Tutorial) - Code Monkey (https://youtu.be/0QU0yV0CYT4)\r\n\r\n\"Wipe
-    Away Those Tears\" Composed by Jonathan Shaw (www.jshaw.co.uk)\r\n\r\nMenu Music
-    - mrpoly (https://opengameart.org/content/menu-music)\r\n\r\nBattle March - Epic
-    Orchestral Music Loop - PlayOnLoop (Playonloop.com)\r\n\r\nescubidubidu g\xFCer
-    ar yu - PILFRUT (https://www.youtube.com/shorts/c1yfMO7dGDc)\r\n\r\nRPG inventory
-    icons - REXARD (https://assetstore.unity.com/packages/2d/gui/icons/rpg-inventory-icons-56687)\r\n\r\nPrototype
-    Hero Demo - Pixel Art - Sven Thole (https://assetstore.unity.com/packages/2d/characters/prototype-hero-demo-pixel-art-186233)\r\n\r\nFantasy
-    Inventory Icons [Free] - Hippo (https://assetstore.unity.com/packages/2d/gui/icons/fantasy-inventory-icons-free-143805)\r\n\r\n2D
-    Pixel Item Asset Pack - Startled Pixels - (https://assetstore.unity.com/packages/2d/gui/icons/2d-pixel-item-asset-pack-99645)\r\n\r\nPanel
-    Image - Wallpaper Flare (https://www.wallpaperflare.com/cartoon-character-wallpaper-cyberpunk-video-games-pixel-art-wallpaper-pcsjv/download/1920x1080)\r\n\r\nCharacter
-    Scripts - Prime31 (https://github.com/prime31/CharacterController2D)"
+  m_text: '"Wipe Away Those Tears" Composed by Jonathan Shaw (www.jshaw.co.uk)
+
+    
+
+    Mystic
+    wood - https://game-endeavor.itch.io/
+
+    
+
+    Forest Ambience - Tiny Woods
+    - (https://opengameart.org/content/forest-ambience)
+
+    
+
+    Sword sound
+    effects - StarNinjas - (https://opengameart.org/users/starninjas)
+
+    
+
+    Woodland
+    Fantasy - Matthew Pablo - (https://opengameart.org/content/woodland-fantasy)
+
+    
+
+    EpicOchestralFantasy
+    - linxiaoma/Markus Lindner - (https://opengameart.org/content/epic-orchestral-fantasy-theme)
+
+    
+
+    Glass
+    Breaks - Till Behrend - (https://opengameart.org/content/glass-break)
+
+    
+
+    Laser
+    Shot - mobeyee.com
+
+    
+
+    
+
+    Fantasy Wooden GUI:Free - Black Hammer
+    (https://assetstore.unity.com/packages/2d/gui/fantasy-wooden-gui-free-103811)
+
+    
+
+    Fantasy
+    Inventory Icons [Free] - HIPPO (https://assetstore.unity.com/packages/2d/gui/icons/fantasy-inventory-icons-free-143805)
+
+    
+
+    RPG
+    inventory icons - REXARD (https://assetstore.unity.com/packages/2d/gui/icons/rpg-inventory-icons-56687)
+
+    
+
+    Hero
+    Knight - Pixel Art - Sven Thole (https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188)
+
+    
+
+    2D
+    Pixel Item Asset Pack - Startled Pixels - (https://assetstore.unity.com/packages/2d/gui/icons/2d-pixel-item-asset-pack-99645)
+
+    
+
+    Pixel
+    Art Top Down - Basic - CAINOS - (https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605)
+
+    
+
+    Panel
+    Image - https://mobile.twitter.com/skittlefuck/status/710525780883873792/photo/1
+
+    
+
+    Blood
+    Splatter Image - FREEICONSPNG (https://www.freeiconspng.com/downloadimg/44466)
+
+    
+
+    Art4
+    - Choops91 (https://www.deviantart.com/choops91/art/Art4-523846588)
+
+    
+
+    12x12-rpg-tileset
+    - Cypor - (https://cypor.itch.io/12x12-rpg-tileset)
+
+    
+
+    Fantasy Free
+    GUI - ZOSMA (https://assetstore.unity.com/packages/2d/gui/icons/fantasy-free-gui-147682)
+
+    
+
+    Panel
+    Image - Wallpaper Flare (https://www.wallpaperflare.com/cartoon-character-wallpaper-cyberpunk-video-games-pixel-art-wallpaper-pcsjv/download/1920x1080)
+
+    
+
+    RPG
+    Tutorial Asset - DEVASSETS POWERED BY BRACKEYS (https://devassets.com/assets/rpg-tutorial-assets/)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -704,8 +787,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7.5
-  m_fontSizeBase: 7.5
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1052,14 +1135,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7878771, g: 0.8490566, b: 0.7641509, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13e0398ed60254242af22f189eebada8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce6b2ec2328b51c428de5006a20da233, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3962,14 +4045,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7878771, g: 0.8490566, b: 0.7641509, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13e0398ed60254242af22f189eebada8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce6b2ec2328b51c428de5006a20da233, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4040,14 +4123,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7878771, g: 0.8490566, b: 0.7641509, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13e0398ed60254242af22f189eebada8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce6b2ec2328b51c428de5006a20da233, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4957,7 +5040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1656053287
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5471,16 +5554,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1896729671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &1896729673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5876,14 +5979,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7878771, g: 0.8490566, b: 0.7641509, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13e0398ed60254242af22f189eebada8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce6b2ec2328b51c428de5006a20da233, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

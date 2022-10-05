@@ -39,10 +39,21 @@ public class PlayerHitbox : MonoBehaviour
     //door
     public GameObject closedDoor;
     public GameObject openDoor;
+    public GameObject doorCollider;
     public SoundsScript soundsScript;
+    public int bossKillCount;
 
     public static int coins;
     public string actorName;
+
+    //shop
+    public GameObject backToMapPanel;
+    public GameObject mainPanels;
+    public GameObject buttonsButton;
+
+    //npc
+    public GameObject npc;
+    public Notification notification;
 
     public void Awake()
     {
@@ -65,7 +76,7 @@ public class PlayerHitbox : MonoBehaviour
     public void Start()
     {
         //health bar
-        currentHealth = maxStamina;
+        currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
         //stamina bar
@@ -194,15 +205,49 @@ public class PlayerHitbox : MonoBehaviour
 
         if (other.tag == "Door")
         {
-            if (coinCount >= 10)
+            if (bossKillCount == 1)
             {
                 StartCoroutine(FlashBlue());
                 closedDoor.SetActive(false);
                 openDoor.SetActive(true);
+                doorCollider.SetActive(false);
                 soundsScript.Door();
                 soundsScript.Opened();
             }
         }
+
+        if (other.tag == "Shop")
+        {
+            mainPanels.SetActive(true);
+            backToMapPanel.SetActive(true);
+            buttonsButton.SetActive(true);
+        }
+
+        if (other.tag == "Win")
+        {
+            StartCoroutine(FlashBlue());
+            StartCoroutine(Win());
+        }
+
+        if (other.tag == "NPC")
+        {
+            StartCoroutine(NPC());
+        }
+    }
+
+    public IEnumerator NPC()
+    {
+        npc.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        notification.NPCInteraction();
+        yield return new WaitForSeconds(12f);
+        npc.SetActive(false);
+    }
+
+    public IEnumerator Win()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("WinScene");
     }
 
     public IEnumerator FlashRed()
