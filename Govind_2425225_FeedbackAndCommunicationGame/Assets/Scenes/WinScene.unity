@@ -132,7 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 59695414}
-  - component: {fileID: 59695413}
   m_Layer: 0
   m_Name: WinSceneScript
   m_TagString: Untagged
@@ -140,18 +139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &59695413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59695412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80dfe0f20eca99b4a95a04f4397b258e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &59695414
 Transform:
   m_ObjectHideFlags: 0
@@ -249,9 +236,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 59695413}
-        m_TargetAssemblyTypeName: WinSceneScript, Assembly-CSharp
-        m_MethodName: BackToMainMenu
+      - m_Target: {fileID: 555079006}
+        m_TargetAssemblyTypeName: GameMenuScript, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -437,6 +424,7 @@ GameObject:
   - component: {fileID: 555079003}
   - component: {fileID: 555079005}
   - component: {fileID: 555079004}
+  - component: {fileID: 555079006}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -504,6 +492,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555079002}
   m_CullTransparentMesh: 1
+--- !u!114 &555079006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555079002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93105a186d16cd46b1d8901d594b54a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1088326482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,8 +1261,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 59695413}
-        m_TargetAssemblyTypeName: WinSceneScript, Assembly-CSharp
+      - m_Target: {fileID: 555079006}
+        m_TargetAssemblyTypeName: GameMenuScript, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
