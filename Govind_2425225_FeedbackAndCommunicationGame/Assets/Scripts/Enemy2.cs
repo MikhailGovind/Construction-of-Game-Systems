@@ -39,7 +39,7 @@ public class Enemy2 : MonoBehaviour
 
     private void Awake()
     {
-        sprite.color = Color.red;
+        //sprite.color = Color.red;
         danger = this.gameObject.transform.GetChild(0);
         danger.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
@@ -66,6 +66,17 @@ public class Enemy2 : MonoBehaviour
         {
             animator.SetBool("isWalking", true);
         }
+
+        //set direction of sprite to movement direction 
+        //if (_direction.x < 0) //Left?
+        //{
+        //    sprite.flipX = true;
+
+        //}
+        //else if (_direction.x > 0) //Right?
+        //{
+        //    sprite.flipX = false;
+        //}
 
         if (currentHealth <= 0)
         {
@@ -119,9 +130,9 @@ public class Enemy2 : MonoBehaviour
 
     public IEnumerator FlashRed()
     {
-        sprite.color = Color.white;
-        yield return new WaitForSeconds(0.1f);
         sprite.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = Color.white;
     }
 
     public IEnumerator JumpingAttack()
@@ -131,16 +142,17 @@ public class Enemy2 : MonoBehaviour
         danger.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         yield return new WaitForSeconds(jumpDuration - 1f);
 
-        sprite.color = Color.green;
+        sprite.color = Color.red;
         chaseScript.isWaiting = false;
         chaseScript.isAttacking = true;
-        isAttacking = true; 
+        isAttacking = true;
         yield return new WaitForSeconds(1f);
 
+        animator.SetTrigger("Attack");
         danger.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         chaseScript.isAttacking = false;
         isAttacking = false;
-        sprite.color = Color.red;
+        sprite.color = Color.white;
     }
 
     public void updateDanger(Vector2 target)

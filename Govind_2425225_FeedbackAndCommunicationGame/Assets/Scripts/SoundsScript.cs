@@ -8,6 +8,7 @@ public class SoundsScript : MonoBehaviour
     public AudioSource opened;
     public AudioSource door;
     public AudioSource sword;
+    public AudioSource skee;
 
     public void Glass()
     {
@@ -27,5 +28,10 @@ public class SoundsScript : MonoBehaviour
     public void Door()
     {
         door.Play();
+    }
+
+    public void Skee()
+    {
+        skee.Play();
     }
 }

@@ -240,7 +240,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomiser: 0
+  chestChecker: 0
   healthPotOne: {fileID: 90951374505614593, guid: 51af7ac5a9413904d8ae57962e8c1d58,
     type: 3}
   coinOne: {fileID: 1751617770578805692, guid: 0b6a88868ec628d49a19664aaf76235a, type: 3}
+  coinTwo: {fileID: 1751617770578805692, guid: 0b6a88868ec628d49a19664aaf76235a, type: 3}
+  coinThree: {fileID: 1751617770578805692, guid: 0b6a88868ec628d49a19664aaf76235a,
+    type: 3}
+  coinFour: {fileID: 1751617770578805692, guid: 0b6a88868ec628d49a19664aaf76235a,
+    type: 3}
+  coinFive: {fileID: 1751617770578805692, guid: 0b6a88868ec628d49a19664aaf76235a,
+    type: 3}
   soundsScript: {fileID: 0}

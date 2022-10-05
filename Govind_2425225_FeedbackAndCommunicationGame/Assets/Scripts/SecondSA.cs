@@ -22,18 +22,22 @@ public class SecondSA : MonoBehaviour
         swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false;
         damage = 5;
-
-        damage = playerHitbox.maxStrength - 5;
-        // Debug.Log("heavy attack" + damage);
     }
 
-public void AttackRight()
+    private void Update()
+    {
+        damage = playerHitbox.maxStrength - 5;
+    }
+
+    public void AttackRight()
     {
         swordCollider.enabled = true;
         // Debug.Log("SASecond happened");
 
         transform.localPosition = rightAttackOffset;
         soundsScript.Sword();
+
+        Debug.Log("heavy attack" + damage);
     }
 
     public void AttackLeft()
@@ -42,6 +46,8 @@ public void AttackRight()
         // Debug.Log("SASecond happened");
         transform.localPosition = new Vector2(rightAttackOffset.x - 2, rightAttackOffset.y);
         soundsScript.Sword();
+
+        Debug.Log("heavy attack" + damage);
     }
 
     public void StopAttack()
