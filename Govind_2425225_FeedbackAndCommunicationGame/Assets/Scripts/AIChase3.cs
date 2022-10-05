@@ -13,7 +13,7 @@ public class AIChase3 : MonoBehaviour
     private float distance;
 
     // private float period = 0;
-    Enemy2 enemyMain;
+    Enemy3 enemyMain;
     bool locationUpdated = false;
 
     Vector2 playerPrevPlace;
@@ -33,7 +33,7 @@ public class AIChase3 : MonoBehaviour
     // Transform pt3;
     private void Awake()
     {
-        enemyMain = GetComponent<Enemy2>();
+        enemyMain = GetComponent<Enemy3>();
         baseVec = new Vector2(0.5f, 0.5f);
         // pt1 = enemyMain.transform.GetChild(2);
         // pt2 = enemyMain.transform.GetChild(3);

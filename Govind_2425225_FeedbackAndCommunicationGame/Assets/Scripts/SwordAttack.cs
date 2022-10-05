@@ -79,5 +79,18 @@ public class SwordAttack : MonoBehaviour
                 // Debug.Log(enemy.maxHealth);
             }
         }
+
+        if (other.tag == "Enemy3")
+        {
+            //deal damage to enemy
+            Enemy3 enemy = other.GetComponent<Enemy3>();
+
+            if (enemy != null)
+            {
+                enemy.currentHealth -= damage;
+
+                // Debug.Log(enemy.maxHealth);
+            }
+        }
     }
 }

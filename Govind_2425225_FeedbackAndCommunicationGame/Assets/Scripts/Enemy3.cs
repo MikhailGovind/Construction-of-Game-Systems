@@ -17,7 +17,7 @@ public class Enemy3 : MonoBehaviour
     private Vector2 _direction;
 
     Animator animator;
-    AIChase2 chaseScript;
+    AIChase3 chaseScript;
 
     public int damage = 3; //Damage enemy deals
 
@@ -39,13 +39,13 @@ public class Enemy3 : MonoBehaviour
 
     private void Awake()
     {
-        sprite.color = Color.red;
+        sprite.color = Color.green;
         danger = this.gameObject.transform.GetChild(0);
         danger.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
         jumpDuration = totalCycle - timeBtwnAttacks;
         animator = GetComponent<Animator>();
-        chaseScript = GetComponent<AIChase2>();
+        chaseScript = GetComponent<AIChase3>();
         _direction = new Vector2(1, 0);
 
         //health bar
@@ -119,9 +119,9 @@ public class Enemy3 : MonoBehaviour
 
     public IEnumerator FlashRed()
     {
-        sprite.color = Color.white;
+        sprite.color = Color.yellow;
         yield return new WaitForSeconds(0.1f);
-        sprite.color = Color.red;
+        sprite.color = Color.green;
     }
 
     public IEnumerator JumpingAttack()
@@ -131,7 +131,7 @@ public class Enemy3 : MonoBehaviour
         danger.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         yield return new WaitForSeconds(jumpDuration - 1f);
 
-        sprite.color = Color.green;
+        sprite.color = Color.red;
         chaseScript.isWaiting = false;
         chaseScript.isAttacking = true;
         isAttacking = true; 
@@ -140,7 +140,7 @@ public class Enemy3 : MonoBehaviour
         danger.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         chaseScript.isAttacking = false;
         isAttacking = false;
-        sprite.color = Color.red;
+        sprite.color = Color.green;
     }
 
     public void updateDanger(Vector2 target)

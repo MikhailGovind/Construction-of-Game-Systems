@@ -70,11 +70,24 @@ public class ThirdSA : MonoBehaviour
                 // Debug.Log("trigger activated");
             }
         }
-        
+
         if (other.tag == "Enemy2")
         {
             //deal damage to enemy
             Enemy2 enemy = other.GetComponent<Enemy2>();
+
+            if (enemy != null)
+            {
+                enemy.currentHealth -= damage;
+
+                // Debug.Log(enemy.maxHealth);
+            }
+        }
+
+        if (other.tag == "Enemy3")
+        {
+            //deal damage to enemy
+            Enemy3 enemy = other.GetComponent<Enemy3>();
 
             if (enemy != null)
             {

@@ -26,6 +26,8 @@ TagManager:
   - Shop
   - Win
   - NPC
+  - Player_gfx
+  - Enemy3
   layers:
   - Default
   - TransparentFX
