@@ -8,7 +8,6 @@ using TMPro;
 public class Enemy2 : MonoBehaviour
 {
     PlayerHitbox playerHitbox;
-    public string demoVar;
 
     //Coins to Drop
     public GameObject coinOne;
