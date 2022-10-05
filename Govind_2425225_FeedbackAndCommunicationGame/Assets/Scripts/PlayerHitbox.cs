@@ -41,7 +41,7 @@ public class PlayerHitbox : MonoBehaviour
     public GameObject openDoor;
     public GameObject doorCollider;
     public SoundsScript soundsScript;
-    public int bossKillCount;
+    public int killedBoss;
 
     public static int coins;
     public string actorName;
@@ -54,6 +54,9 @@ public class PlayerHitbox : MonoBehaviour
     //npc
     public GameObject npc;
     public Notification notification;
+
+    //boss
+    public Boss boss;
 
     public void Awake()
     {
@@ -206,7 +209,7 @@ public class PlayerHitbox : MonoBehaviour
 
         if (other.tag == "Door")
         {
-            if (bossKillCount == 1)
+            if (killedBoss >= 1)
             {
                 StartCoroutine(FlashBlue());
                 closedDoor.SetActive(false);

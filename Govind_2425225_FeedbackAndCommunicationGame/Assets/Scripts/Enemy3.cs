@@ -9,7 +9,7 @@ public class Enemy3 : MonoBehaviour
 {
     private Vector2 _direction;
 
-    Animator animator;
+    public Animator animator;
     AIChase3 chaseScript;
 
     public int damage = 5; //Damage enemy deals (PlayerHitbox needs to get this from the parent of slime (this))
@@ -21,6 +21,7 @@ public class Enemy3 : MonoBehaviour
     public Transform pnt6, pnt7, pnt8, pnt9, pnt10, pnt11, pnt12, pnt13;
     Transform desti;
     public GameObject boss;
+    public Boss bossScript;
 
     int randomNumber, lastNumber;
     public bool inRange = false;
@@ -75,7 +76,7 @@ public class Enemy3 : MonoBehaviour
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
         jumpDuration = totalCycle - timeBtwnAttacks;
-        animator = boss.GetComponent<Animator>();
+        //animator = boss.GetComponent<Animator>();
         // animator = GetComponent<Animator>();
         // chaseScript = GetComponent<AIChase3>();
         // _direction = new Vector2(1, 0);
