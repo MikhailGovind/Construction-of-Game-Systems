@@ -21,8 +21,11 @@ TagManager:
   - Helmet
   - Weapon
   - Enemy2
-  - Enemy3
-  - Player_gfx
+  - KingNotice
+  - SkeegNotice
+  - Shop
+  - Win
+  - NPC
   layers:
   - Default
   - TransparentFX
