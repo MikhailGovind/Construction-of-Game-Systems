@@ -22,9 +22,11 @@ public class SwordAttack : MonoBehaviour
         leftAttackOffset = new Vector2(rightAttackOffset.x -2, rightAttackOffset.y);
         swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false;
+    }
 
+    private void Update()
+    {
         damage = playerHitbox.maxStrength - 7;
-        // Debug.Log("light attack" + damage);
     }
 
     public void AttackRight()
@@ -34,6 +36,7 @@ public class SwordAttack : MonoBehaviour
         soundsScript.Sword();
 
         // Debug.Log("collider true right");
+        Debug.Log("light attack" + damage);
     }
 
     public void AttackLeft()
@@ -43,6 +46,7 @@ public class SwordAttack : MonoBehaviour
         soundsScript.Sword();
 
         // Debug.Log("collider true left");
+        Debug.Log("light attack" + damage);
     }
 
     public void StopAttack()

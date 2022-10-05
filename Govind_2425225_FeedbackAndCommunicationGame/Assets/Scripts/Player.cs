@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public SecondSA secondSA;
     public ThirdSA thirdSA;
     public PlayerHitbox playerHitbox;
-
+    public Notification notification; //new line
 
     Vector2 movementInput;
     Rigidbody2D rb;
@@ -136,10 +136,13 @@ public class Player : MonoBehaviour
 
     void OnCut()
     {
-        if (playerHitbox.currentStamina >= 10)
+        if (notification.npcInteract >= 1) //new if statement
         {
-            animator.SetTrigger("swordAttack3");
-            SpecialAttack();
+            if (playerHitbox.currentStamina >= 10)
+            {
+                animator.SetTrigger("swordAttack3");
+                SpecialAttack();
+            }
         }
     }
 

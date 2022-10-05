@@ -25,6 +25,7 @@ public class Notification : MonoBehaviour
     public GameObject npcPanel;
     public GameObject seventhText;
     public GameObject eighthText;
+    public int npcInteract;
 
     //instructions
     public GameObject instructionsPanel;
@@ -115,6 +116,8 @@ public class Notification : MonoBehaviour
         eighthText.SetActive(true);
         yield return new WaitForSeconds(3f);
         npcPanel.SetActive(false);
+
+        npcInteract += 1;
     }
 
     #endregion

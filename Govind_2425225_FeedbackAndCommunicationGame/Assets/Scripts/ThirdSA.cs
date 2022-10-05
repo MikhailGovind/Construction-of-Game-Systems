@@ -22,8 +22,6 @@ public class ThirdSA : MonoBehaviour
         swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false;
         damage = 10;
-
-        damage = playerHitbox.maxStrength;
     }
 
     private void Update()
@@ -35,7 +33,7 @@ public class ThirdSA : MonoBehaviour
     {
         swordCollider.enabled = true;
         // Debug.Log("thirdSA happened");
-        // Debug.Log("special attack" + damage);
+        Debug.Log("special attack" + damage);
 
         transform.localPosition = rightAttackOffset;
         soundsScript.Sword();
@@ -45,7 +43,7 @@ public class ThirdSA : MonoBehaviour
     {
         swordCollider.enabled = true;
         // Debug.Log("thirdSA happened");
-        // Debug.Log("special attack" + damage);
+        Debug.Log("special attack" + damage);
 
         transform.localPosition = new Vector2(rightAttackOffset.x - 2, rightAttackOffset.y);
         soundsScript.Sword();
