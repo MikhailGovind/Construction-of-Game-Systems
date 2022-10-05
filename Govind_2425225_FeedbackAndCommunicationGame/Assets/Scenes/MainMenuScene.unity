@@ -657,11 +657,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"Wipe Away Those Tears" Composed by Jonathan Shaw (www.jshaw.co.uk)
+  m_text: 'Skeegelmore sound effect - Caleb Marshal
 
 
-    Mystic
-    wood - https://game-endeavor.itch.io/
+    The Ball and Chain Bot
+    - penusbmic (https://penusbmic.itch.io/sci-fi-character-pack-10)
+
+
+    "Wipe
+    Away Those Tears" Composed by Jonathan Shaw (www.jshaw.co.uk)
+
+
+    Mystic wood
+    - https://game-endeavor.itch.io/
 
 
     Forest Ambience - Tiny Woods - (https://opengameart.org/content/forest-ambience)
@@ -710,8 +718,8 @@ MonoBehaviour:
     Art Top Down - Basic - CAINOS - (https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605)
 
 
-    Panel
-    Image - https://mobile.twitter.com/skittlefuck/status/710525780883873792/photo/1
+    Menu
+    Images - https://mobile.twitter.com/skittlefuck/status/710525780883873792/photo/1
 
 
     Blood
@@ -763,8 +771,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7.5
-  m_fontSizeBase: 7.5
+  m_fontSize: 6.7
+  m_fontSizeBase: 6.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1118,7 +1126,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce6b2ec2328b51c428de5006a20da233, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fedaf8f9b0c59a24081625eaa07076d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4029,7 +4037,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce6b2ec2328b51c428de5006a20da233, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fedaf8f9b0c59a24081625eaa07076d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4119,7 +4127,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce6b2ec2328b51c428de5006a20da233, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fedaf8f9b0c59a24081625eaa07076d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5975,7 +5983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce6b2ec2328b51c428de5006a20da233, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fedaf8f9b0c59a24081625eaa07076d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

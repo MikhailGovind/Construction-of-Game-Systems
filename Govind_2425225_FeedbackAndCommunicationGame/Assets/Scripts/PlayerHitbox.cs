@@ -57,7 +57,7 @@ public class PlayerHitbox : MonoBehaviour
 
     public void Awake()
     {
-        maxHealth = 10;
+        maxHealth = 20;
         hurtSlime = 2;
         healthGain = 2;
 
@@ -186,16 +186,7 @@ public class PlayerHitbox : MonoBehaviour
 
         if (other.tag == "HealthPot")
         {
-            if (currentHealth < 10)
-            {
-                currentHealth += healthGain;
-                StartCoroutine(FlashGreen());
-            }
-
-            if (currentHealth >= maxHealth)
-            {
-                currentHealth = maxHealth;
-            }
+            StartCoroutine(FlashGreen());
         }
 
         if (other.tag == "Coin")
@@ -264,9 +255,18 @@ public class PlayerHitbox : MonoBehaviour
 
     public IEnumerator FlashGreen()
     {
-        spriteRenderer.color = Color.green;
-        yield return new WaitForSeconds(0.2f);
-        spriteRenderer.color = Color.white;
+        if (currentHealth < maxHealth)
+        {
+            currentHealth += healthGain;
+            spriteRenderer.color = Color.green;
+            yield return new WaitForSeconds(0.2f);
+            spriteRenderer.color = Color.white;
+        }
+
+        if (currentHealth >= maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
     }
 
     public IEnumerator FlashGold()

@@ -59,6 +59,8 @@ public class Notification : MonoBehaviour
 
     public IEnumerator kingPanelOpen()
     {
+        instructionsPanel.SetActive(false);
+        skeegPanel.SetActive(false);
         kingPanel.SetActive(true);
         firstText.SetActive(true);
         yield return new WaitForSeconds(3f);
@@ -81,6 +83,9 @@ public class Notification : MonoBehaviour
     #region Skeeg's Notice
     public IEnumerator skeegPanelOpen()
     {
+        kingPanel.SetActive(false);
+        instructionsPanel.SetActive(false);
+        soundsScript.Skee();
         skeegPanel.SetActive(true);
         fourthText.SetActive(true);
         yield return new WaitForSeconds(3f);
@@ -90,7 +95,7 @@ public class Notification : MonoBehaviour
         fifthText.SetActive(false);
         sixthText.SetActive(true);
         yield return new WaitForSeconds(3f);
-        skeegPanel.SetActive(false);
+        Destroy(skeegPanel);
     }
 
     public void skeegPanelClosed()
@@ -128,10 +133,10 @@ public class Notification : MonoBehaviour
     {
         instructionsPanel.SetActive(true);
         ninthText.SetActive(true);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(7f);
         ninthText.SetActive(false);
         tenthText.SetActive(true);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(7f);
         instructionsPanel.SetActive(false);
     }
 
