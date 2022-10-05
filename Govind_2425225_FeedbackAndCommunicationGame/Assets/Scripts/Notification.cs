@@ -133,10 +133,10 @@ public class Notification : MonoBehaviour
     {
         instructionsPanel.SetActive(true);
         ninthText.SetActive(true);
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(8.5f);
         ninthText.SetActive(false);
         tenthText.SetActive(true);
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(8.5f);
         instructionsPanel.SetActive(false);
     }
 

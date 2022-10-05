@@ -6,7 +6,7 @@ using UnityEngine.AI;
 using TMPro;
 public class Boss : MonoBehaviour
 {
-    PlayerHitbox playerHitbox;
+    public PlayerHitbox playerHitbox;
 
     //Coins to Drop
     public GameObject coinOne;
@@ -24,6 +24,8 @@ public class Boss : MonoBehaviour
     public TextMeshProUGUI healthText;
     public SpriteRenderer sprite;
     public int enemyType;
+    public int killedBoss;
+    public GameObject bossArea;
 
     private void Start()
     {
@@ -73,12 +75,13 @@ public class Boss : MonoBehaviour
 
     public void Defeated()
     {
+        playerHitbox.killedBoss += 1;
         animator.SetTrigger("Defeated");
     }
 
     public void Delete()
     {
-        Destroy(this.gameObject.transform.parent);
+        Destroy(bossArea);
         Destroy(gameObject);
         DropCoin();
     }
