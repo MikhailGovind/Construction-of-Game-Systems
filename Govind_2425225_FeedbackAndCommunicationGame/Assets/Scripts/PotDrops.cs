@@ -7,8 +7,13 @@ using UnityEngine.InputSystem;
 public class PotDrops : MonoBehaviour
 {
     public int randomiser;
+    public int chestChecker;
     public GameObject healthPotOne;
     public GameObject coinOne;
+    public GameObject coinTwo;
+    public GameObject coinThree;
+    public GameObject coinFour;
+    public GameObject coinFive;
 
     public SoundsScript soundsScript;
 
@@ -39,6 +44,11 @@ public class PotDrops : MonoBehaviour
             {
                 DropBoth();
             }
+
+            if (chestChecker == 1)
+            {
+                DropAll();
+            }
         }
     }
 
@@ -59,5 +69,15 @@ public class PotDrops : MonoBehaviour
         Vector2 position = transform.position;
         GameObject coin = Instantiate(coinOne, position + new Vector2(0.3f, 0.3f), Quaternion.identity);
         GameObject healthPot = Instantiate(healthPotOne, position, Quaternion.identity);
+    }
+
+    void DropAll()
+    {
+        Vector2 position = transform.position;
+        GameObject coin = Instantiate(coinOne, position, Quaternion.identity);
+        GameObject secondCoin = Instantiate(coinTwo, position + new Vector2(0.3f, 0.3f), Quaternion.identity);
+        GameObject thirdCoin = Instantiate(coinThree, position + new Vector2(0.6f, 0.6f), Quaternion.identity);
+        GameObject fourthCoin = Instantiate(coinFour, position + new Vector2(-0.3f, -0.3f), Quaternion.identity);
+        GameObject fifthCoin = Instantiate(coinFive, position + new Vector2(-0.6f, -0.6f), Quaternion.identity);
     }
 }
